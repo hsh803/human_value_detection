@@ -4,9 +4,8 @@
 - Sub-task 1: Given a text, for each sentence, detect which human values the sentence refers to.
 
 ## Task
-- Our project goal
-: Train LLMs that works well on this multi-label task. 
-: Is there a pattern of how the model’s effectiveness changes according to the size of the training data? How and why?
+- Project goal: Train LLMs that works well on the multi-label task and test to answer to our experimental question 
+- Experiment question: Is there a pattern of how the model’s effectiveness changes according to the size of the training data? How and why?
 
 ## Data
 - 44 758 sentences and 19*2 (values * attained/constrained) human value labels in English
@@ -22,14 +21,23 @@
 - To find a proper pre-trained model for our project, we trained three BERT-based LLMs with the 11K training dataset as a initial experiment.
 - Base codes given by the organization for training and evaluation were adjusted and implemented for our own experiments.
 - We chose Roberta for further training due to its best performance
+- Base code source: https://github.com/touche-webis-de/touche-code/tree/main/clef24/human-value-detection/approaches/bert-baseline
 
 <img width="350" height="150" alt="image" src="https://github.com/user-attachments/assets/6c9b8a95-328a-4d66-8143-985155a2c0c9" />
 
+## Further experiments
+- Training Roberta base model on 11K, 22K, 33K and 44K (all)
+- Example of trained model: roberta_11K.zip
+
 ## Evaluation 
-- For detection: Precision, Recall, F1
-- For each label: ROC (Receiver Operating Characteristic), AUC (Area Under the Curve)
+- Performance for detection: Precision, Recall, F1
+- Performance for each label: ROC (Receiver Operating Characteristic), AUC (Area Under the Curve)
 
 ## Results
+- F1 and Recall scores of the evaluation get higher when the data size gets bigger while precision goes down when new data is added at the point from 22K to
+33K and to all.
+- To evaluate the model’s performance for each label, we used ROC and AUC curves because the evaluation code given by the organizer for this shared task used them.
+
 <img width="663" height="347" alt="image" src="https://github.com/user-attachments/assets/791e5951-112b-467c-bbce-6834cffbd4a4" />
 <img width="1241" height="577" alt="image" src="https://github.com/user-attachments/assets/467e9db6-41d5-4f41-a424-d7638b52bbad" />
 
