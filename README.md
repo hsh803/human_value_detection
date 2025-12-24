@@ -27,7 +27,6 @@
 
 ## Further experiments
 - Training Roberta base model on 11K, 22K, 33K and 44K (all)
-- Example of trained model: roberta_11K.zip
 
 ## Evaluation 
 - Performance for detection: Precision, Recall, F1
@@ -38,6 +37,6 @@
 33K and to all.
 - To evaluate the model’s performance for each label, we used ROC and AUC curves because the evaluation code given by the organizer for this shared task used them.
 
-<img width="663" height="347" alt="image" src="https://github.com/user-attachments/assets/791e5951-112b-467c-bbce-6834cffbd4a4" />
-<img width="1241" height="577" alt="image" src="https://github.com/user-attachments/assets/467e9db6-41d5-4f41-a424-d7638b52bbad" />
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/791e5951-112b-467c-bbce-6834cffbd4a4" />
+<img width="800" height="550" alt="image" src="https://github.com/user-attachments/assets/467e9db6-41d5-4f41-a424-d7638b52bbad" />
 
